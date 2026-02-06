@@ -1,0 +1,238 @@
+.dashboard {
+    max-width: 1200px;
+}
+
+.dashboard-warning {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 20px;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: var(--border-radius);
+    margin-bottom: 24px;
+    color: var(--warning);
+}
+
+.dashboard-warning svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.dashboard-warning strong {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--text-primary);
+}
+
+.dashboard-warning p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+/* Server Status Card */
+.server-status-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.server-controls {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.btn-large {
+    padding: 16px 32px;
+    font-size: 15px;
+    width: 100%;
+}
+
+.btn-spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.lock-warning {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+    padding: 12px 16px;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: var(--border-radius-sm);
+    font-size: 13px;
+    color: var(--error);
+}
+
+.lock-warning strong {
+    color: var(--text-primary);
+}
+
+.lock-warning .btn {
+    margin-left: auto;
+}
+
+/* Sync Status Card */
+.sync-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sync-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sync-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.sync-label {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.sync-value {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.sync-value.owned {
+    color: var(--success);
+}
+
+.sync-value.locked {
+    color: var(--error);
+}
+
+/* Console Card */
+.console-card {
+    margin-top: 0;
+}
+
+.console-output {
+    background: #050505;
+    border-radius: var(--border-radius-sm);
+    padding: 16px;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 12px;
+    line-height: 1.6;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.console-empty {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.console-line {
+    color: var(--text-secondary);
+}
+
+.console-line:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.btn-small {
+    padding: 8px 16px;
+    font-size: 12px;
+}
+
+/* Console Input */
+.console-input {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color);
+}
+
+.console-input .input {
+    flex: 1;
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 13px;
+}
+
+.console-input .input:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.console-input .btn {
+    min-width: 80px;
+}
+
+/* Conflict Resolution UI */
+.conflict-resolution {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.conflict-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: var(--border-radius);
+    color: #ef4444;
+}
+
+.conflict-message svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.conflict-message strong {
+    display: block;
+    color: #ef4444;
+    margin-bottom: 4px;
+}
+
+.conflict-message p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.conflict-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.conflict-buttons .btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.status-dot.conflict {
+    background: #ef4444;
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.5);
+}

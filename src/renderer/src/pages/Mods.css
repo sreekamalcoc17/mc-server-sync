@@ -1,0 +1,147 @@
+.mods-page {
+    max-width: 900px;
+}
+
+.mods-warning {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    border-radius: var(--border-radius);
+    color: var(--warning);
+}
+
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 60px;
+    color: var(--text-secondary);
+}
+
+.mod-loader-badge {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.loader-type {
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.loader-type.fabric {
+    background: rgba(139, 92, 246, 0.15);
+    color: #a78bfa;
+}
+
+.loader-type.forge {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+}
+
+.loader-type.unknown {
+    background: rgba(107, 114, 128, 0.15);
+    color: #9ca3af;
+}
+
+.mod-counts {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.empty-mods {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 40px;
+    color: var(--text-muted);
+}
+
+.mods-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mod-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background: var(--bg-tertiary);
+    border-radius: var(--border-radius);
+    transition: all 0.2s ease;
+}
+
+.mod-row:hover {
+    background: var(--bg-secondary);
+}
+
+.mod-row.disabled {
+    opacity: 0.6;
+}
+
+.mod-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mod-name {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.mod-size {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* Toggle (reusing from ServerConfig) */
+.toggle {
+    position: relative;
+    width: 48px;
+    height: 24px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.toggle.active {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.toggle-slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+.toggle.active .toggle-slider {
+    transform: translateX(24px);
+}
+
+.btn-spinner.small {
+    width: 14px;
+    height: 14px;
+}

@@ -1,0 +1,218 @@
+.settings {
+    max-width: 800px;
+}
+
+.settings-section {
+    margin-bottom: 32px;
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+.settings-card {
+    padding: 0;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 24px;
+}
+
+.setting-info {
+    flex: 1;
+}
+
+.setting-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.setting-description {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.setting-control {
+    flex-shrink: 0;
+    min-width: 300px;
+}
+
+.setting-divider {
+    height: 1px;
+    background: var(--border-color);
+    margin: 0 24px;
+}
+
+/* Input Styles */
+.input {
+    width: 100%;
+    padding: 12px 16px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    color: var(--text-primary);
+    font-size: 14px;
+    transition: all var(--transition-fast);
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.input::placeholder {
+    color: var(--text-muted);
+}
+
+.input[readonly] {
+    cursor: default;
+}
+
+.input-number {
+    width: 120px;
+    text-align: center;
+}
+
+/* Path Input */
+.path-input {
+    display: flex;
+    gap: 8px;
+}
+
+.path-input .input {
+    flex: 1;
+}
+
+/* RAM Control */
+.ram-control {
+    display: flex;
+    gap: 24px;
+}
+
+.ram-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ram-input-group label {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+/* Provider Selector */
+.provider-selector {
+    display: flex;
+    gap: 12px;
+}
+
+.provider-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 20px 24px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+.provider-btn:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    color: var(--text-primary);
+}
+
+.provider-btn.active {
+    border-color: var(--accent-primary);
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--text-primary);
+}
+
+.provider-btn svg {
+    opacity: 0.7;
+}
+
+.provider-btn.active svg {
+    opacity: 1;
+    color: var(--accent-primary);
+}
+
+.coming-soon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 9px;
+    padding: 2px 6px;
+    background: var(--warning);
+    color: black;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* Saving Indicator */
+.settings-saving {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 13px;
+    color: var(--text-secondary);
+    animation: slideUp var(--transition-normal) ease;
+}
+
+.saving-indicator {
+    width: 12px;
+    height: 12px;
+    border: 2px solid var(--border-color);
+    border-top-color: var(--accent-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Sync Status */
+.sync-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 10px 14px;
+    border-radius: var(--border-radius-sm);
+    font-size: 13px;
+}
+
+.sync-status.connected {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: var(--success);
+}
+
+.sync-status.disconnected {
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    color: var(--warning);
+}
