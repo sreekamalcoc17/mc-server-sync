@@ -8,12 +8,17 @@
     "dev": "electron-vite dev",
     "build": "electron-vite build",
     "dist": "npm run build && electron-builder",
+    "build:linux": "npm run build && electron-builder --linux AppImage",
     "preview": "electron-vite preview",
     "postinstall": "electron-builder install-app-deps"
   },
   "build": {
     "appId": "com.minesync.app",
     "productName": "MineSync",
+    "linux": {
+      "target": "AppImage",
+      "category": "Game"
+    },
     "win": {
       "target": "nsis"
     },
